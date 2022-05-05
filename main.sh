@@ -23,8 +23,8 @@ fi;
 
 
 # Writing the video execution in shell config file
-echo -n "\nvlc --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-osd " $outputFilename "&" >> $shellConfigfile
-echo -n "\nclear" >> $shellConfigfile
+echo -n "vlc --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-osd " $outputFilename "&" >> $shellConfigfile
+echo -n "clear" >> $shellConfigfile
 
 
 echo -n "\n[+] Operation finished, clearing the terminal in 3 seconds...\n"
