@@ -9,9 +9,9 @@ wget -q $rickrollVideoLink -O $outputFilename
 
 
 # We set up the variable (the config file which is executed to every start of the terminal)
-if [[ $SHELL == '/usr/bin/bash' ]]; then
+if [[ $SHELL == '/usr/bin/bash' || $SHELL == '/bin/bash' ]]; then
 	shellConfigfile="~/.bashrc"
-elif [[ $SHELL == '/usr/bin/zsh' ]]; then
+elif [[ $SHELL == '/usr/bin/zsh' || $SHELL == '/bin/zsh' ]]; then
 	shellConfigfile="~/.zshrc"
 else
 	echo -n "\n[!] Shell has not been recognized [!]\n"
