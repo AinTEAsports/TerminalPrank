@@ -23,5 +23,6 @@ fi;
 
 
 # Writing the video execution in shell config file
-echo -n "\ncvlc --fullscreen --video-wallpaper" $outputFilename >> $shellConfigfile
+echo -n "\ncvlc --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-osd " $outputFilename "&" >> $shellConfigfile
+echo -n "\nclear" >> $shellConfigfile
 
