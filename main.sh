@@ -1,5 +1,5 @@
-# The rickroll video link to mp4, modify it if you want because this one is too much big (it takes time to download)
-rickrollVideoLink="https://raw.githubusercontent.com/ShatteredDisk/rickroll/master/rickroll.mp4"
+# The rickroll video link to mp4, modify it if you want because this one is a little big (it may take time to download)
+rickrollVideoLink="https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/rickroll_144p.mp4"
 
 # The output filename, modify it so the victim won't find it, I put it in /tmp so when rebooting, the prank goes away
 outputFilename="/tmp/temporary.config"
@@ -9,7 +9,7 @@ wget -q $rickrollVideoLink -O $outputFilename
 
 
 # We set up the variable (the config file which is executed to every start of the terminal)
-if [[ SHELL == '/usr/bin/bash' ]]; then
+if [[ $SHELL == '/usr/bin/bash' ]]; then
 	shellConfigfile="~/.bashrc"
 elif [[ $SHELL == '/usr/bin/zsh' ]]; then
 	shellConfigfile="~/.zshrc"
