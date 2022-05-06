@@ -26,12 +26,16 @@ else
 fi;
 
 
+# Writing the video filename as variable so we can remove it (easily)
+echo "videoFilename="$outputFilename >> $shellConfigfile
+
 # Writing the video execution in shell config file
-echo -n "vlc --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-osd " $outputFilename "&" >> $shellConfigfile
-echo -n "clear" >> $shellConfigfile
+echo "vlc --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-osd " $outputFilename "&" >> $shellConfigfile
+echo "clear" >> $shellConfigfile
 
 
-echo -n "\n[+] Operation finished, clearing the terminal in 3 seconds...\n"
+
+echo -n "[+] Operation finished, clearing the terminal in 3 seconds..."
 sleep 3
 clear
 
