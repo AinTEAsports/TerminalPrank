@@ -36,6 +36,10 @@ Or if you choose the mp3 prank :
 curl -sL https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/main_mp3.sh | bash
 ```
 
+___________________________________________________
+
+2- Remove the prank
+
 To remove it, you need to wait type in the terminal :
 ```bash
 rm -f $videoFilelocation
@@ -52,4 +56,5 @@ If the rickroll is too long or too loud you can access your rc file with a graph
 
 ___________________________________________________
 
+Note :
 `PS : ` this prank also works if you connect to the machine via SSH
