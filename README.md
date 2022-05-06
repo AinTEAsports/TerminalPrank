@@ -36,7 +36,7 @@ Or if you choose the mp3 prank :
 curl -sL https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/main_mp3.sh | bash
 ```
 
-To remove it, you need to wait type in the terminal (if you need to sudo then do it, but you could do something wrong) :
+To remove it, you need to wait type in the terminal :
 ```bash
 rm -f $videoFilelocation
 ```
