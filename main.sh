@@ -14,11 +14,15 @@ if [[ $SHELL == '/usr/bin/bash' || $SHELL == '/bin/bash' ]]; then
 elif [[ $SHELL == '/usr/bin/zsh' || $SHELL == '/bin/zsh' ]]; then
 	shellConfigfile=~/.zshrc
 else
-	echo -n "\n[!] Shell has not been recognized [!]\n"
-	echo "Cleaning the screen in 3 seconds..."
-	sleep 3
-	clear
-	exit 1
+	shellConfigfile=~/.${SHELL##*/}rc
+	
+	if [[ ! -f $shellConfigfile ]]; then
+		echo -n "\n[!] Shell has not been recognized [!]\n"
+		echo "Cleaning the screen in 3 seconds..."
+		sleep 3
+		clear
+		exit 1
+	fi;
 fi;
 
 
