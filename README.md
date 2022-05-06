@@ -56,5 +56,6 @@ If the rickroll is too long or too loud you can access your rc file with a graph
 
 ___________________________________________________
 
-Note :
+Note : 
+
 `PS : ` this prank also works if you connect to the machine via SSH
