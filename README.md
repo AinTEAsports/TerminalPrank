@@ -3,7 +3,10 @@ A terminal prank you can put on your friends' Linux terminal, to rickroll them e
 
 
 If you want to do all in one command you can do :
-curl -L https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/main.sh | bash
+curl -sL https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/main.sh | bash
+
+Or if you want the mp3 prank :
+curl -sL https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/main_mp3.sh | bash
 
 
 To execute the prank you'll need to do this on the target OS, you'll need to have 'main.sh' script on the target computer :
