@@ -27,7 +27,7 @@ fi;
 
 
 # Writing the video filename as variable so we can remove it (easily)
-echo "videoFilename="$outputFilename >> $shellConfigfile
+echo "videoFilelocation="$outputFilename >> $shellConfigfile
 
 # Writing the video execution in shell config file
 echo "nohup cvlc --qt-start-minimized --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-interact --no-osd --video-wallpaper" $outputFilename "&" >> $shellConfigfile
