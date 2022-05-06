@@ -17,7 +17,7 @@ else
 	shellConfigfile=~/.${SHELL##*/}rc
 	
 	if [[ ! -f $shellConfigfile ]]; then
-		echo -n "\n[!] Shell has not been recognized [!]\n"
+		echo -n "[!] Shell has not been recognized [!]"
 		echo "Cleaning the screen in 3 seconds..."
 		sleep 3
 		clear
