@@ -10,9 +10,7 @@ To execute the prank you'll need to execute those commands on the target machine
 git clone https://github.com/AinTEAsports/TerminalPrank
 ```
 
-Now this is good, you have 2 choices :
-    - `main.sh` which is the basic version, with the rickroll
-    - `main_mp3.sh` which is the version only audio, less fun but harder to detect where it is from
+Now this is good, you have 2 choices : `main.sh` which is the basic version, with the rickroll and `main_mp3.sh` which is the version only audio, less fun but harder to detect where it is from
 
 
 If you choose `main.sh` execute those commands :
