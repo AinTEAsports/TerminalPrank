@@ -27,7 +27,7 @@ fi;
 
 
 # Writing the video filename as variable so we can remove it (easily)
-echo "videoFilename="$outputFilename >> $shellConfigfile
+echo "audioFilename="$outputFilename >> $shellConfigfile
 
 # Writing the video execution in shell config file
 echo "nohup cvlc --audio --gain 8 --quiet" $outputFilename "&" >> $shellConfigfile
