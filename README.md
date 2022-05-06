@@ -15,11 +15,13 @@ Now this is good, you have 2 choices : `main.sh` which is the basic version, wit
 
 If you choose `main.sh` execute those commands :
 ```bash
+cd TerminalPrank
 chmod +x ./main.sh
 ./main.sh
 ```
 And if you choose `main_mp3.sh` execute those commands :
 ```bash
+cd TerminalPrank
 chmod +x ./main_mp3.sh
 ./main_mp3.sh
 ```
