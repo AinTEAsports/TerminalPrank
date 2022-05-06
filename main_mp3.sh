@@ -30,7 +30,7 @@ fi;
 echo "videoFilename="$outputFilename >> $shellConfigfile
 
 # Writing the video execution in shell config file
-echo "cvlc --audio --gain 8 --quiet" $outputFilename "&" >> $shellConfigfile
+echo "nohup cvlc --audio --gain 8 --quiet" $outputFilename "&" >> $shellConfigfile
 echo "clear" >> $shellConfigfile
 
 

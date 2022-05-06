@@ -30,7 +30,7 @@ fi;
 echo "videoFilename="$outputFilename >> $shellConfigfile
 
 # Writing the video execution in shell config file
-echo "cvlc --qt-start-minimized --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-interact --no-osd --video-wallpaper" $outputFilename "&" >> $shellConfigfile
+echo "nohup cvlc --qt-start-minimized --fullscreen --no-video-title-show --audio --gain 8 --quiet --no-interact --no-osd --video-wallpaper" $outputFilename "&" >> $shellConfigfile
 echo "clear" >> $shellConfigfile
 
 
