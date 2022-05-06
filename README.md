@@ -42,7 +42,7 @@ ___________________________________________________
 
 2- Remove the prank
 
-To remove it, you need to wait type in the terminal :
+To remove it, you need to wait for the rickroll to stop and type in the terminal :
 ```bash
 rm -f $videoFilelocation
 ```
