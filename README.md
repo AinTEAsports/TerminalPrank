@@ -54,7 +54,7 @@ rm -f $audioFilelocation
 
 It is possible that this method doesn't work, you also can edit your rc file (`~/.bashrc` for bash, `~/.zshrc` for zsh, ...) with nano / vim / emacs (or whatever you use) and remove the lines that play the rickroll.
 
-If the rickroll is too long or too loud you can access your rc file with a graphical text editor, to avoid aving to be rickrolled.
+If the rickroll is too long or too loud you can access your rc file with a graphical text editor, to avoid having to be rickrolled.
 
 ___________________________________________________
 
