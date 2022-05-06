@@ -1,4 +1,4 @@
-# The rickroll video link to mp4, modify it if you want because this one is a little big (it may take time to download)
+# The rickroll video link to mp3, modify it if you want because this one is a little big (it may take time to download)
 rickrollVideoLink="https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/rickroll_144p.mp3"
 
 # The output filename, modify it so the victim won't find it, I put it in /tmp so when rebooting, the prank goes away
